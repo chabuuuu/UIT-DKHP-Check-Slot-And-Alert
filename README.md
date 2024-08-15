@@ -39,3 +39,12 @@ Sau đó, vào file course-check-list.json và config:
 - courses: list các mã lớp muốn check
 - delay: from - to: khoảng thời gian random (phút) muốn check, ví dụ from: 2, to: 5 nghĩa là sẽ check random trong mỗi 2 - 5 phút
 - print_course_detail: có log ra detail của course mà fetch được từ server trường không
+
+Run app:
+
+```
+npm install
+npm run start
+```
+
+Hãy chắc chắn là máy đã cài nodejs
