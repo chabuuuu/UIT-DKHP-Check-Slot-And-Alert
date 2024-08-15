@@ -1,6 +1,7 @@
 import axios from "axios";
 import { log } from "console-log-colors";
 import { loadConfig } from "./load-config";
+import { logger } from "../utils/logger";
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = "0";
 const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
@@ -41,6 +42,8 @@ export async function checkCourses() {
         log(notifiMessage, "green");
         //Send message to telegram
         axios.get(TELEGRAM_MESSAGE_API + notifiMessage);
+
+        logger.info(notifiMessage);
       } else {
         log(`Không còn slot cho lớp ${courses}`, "red");
       }
