@@ -1,0 +1,8 @@
+{
+  "courses": ["SE100.P12", "SE100.P13"],
+  "delay": {
+    "from": 2,
+    "to": 5
+  },
+  "print_course_detail": false
+}
